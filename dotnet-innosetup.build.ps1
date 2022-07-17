@@ -20,8 +20,13 @@ task download {
 	& $idpSetup /silent /DIR=.\idp /CURRENTUSER
 }
 
-task build {
-	exec { dotnet build -c $Configuration }
+task getVersion {
+	$script:Version = [string] (get-item .\is\unins000.exe).VersionInfo.ProductVersion
+	Write-Host $script:Version
+}
+
+task build getVersion, {
+	exec { dotnet build -c $Configuration "-p:Version=${script:version}" }
 }
 
 task clean {
@@ -29,7 +34,7 @@ task clean {
 }
 
 task pack build, {
-	exec { dotnet pack -c $Configuration --no-build }
+	exec { dotnet pack -c $Configuration --no-build  "-p:Version=${script:version}" }
 }
 
 task test pack, {
