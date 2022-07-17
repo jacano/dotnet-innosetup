@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "ib": {
+      "version": "5.9.10",
+      "commands": [
+        "ib"
+      ]
+    }
+  }
+}
