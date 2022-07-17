@@ -1,6 +1,6 @@
 # dotnet-innosetup
 
-[dotnet tool]() wrapper for [InnoSetup](https://jrsoftware.org/isinfo.php).
+[dotnet tool](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools) wrapper for [InnoSetup](https://jrsoftware.org/isinfo.php).
 
 Added for convenience: [inno-download-plugin](https://github.com/andykimpe/inno-download-plugin), version 1.5.1
 

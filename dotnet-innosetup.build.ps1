@@ -8,6 +8,8 @@ param(
 	[string]$Configuration = 'Release'
 )
 
+$Name = 'dotnet-innosetup'
+
 task download {
 	$installer = ".\obj\is.exe"
 	if (-not (Test-Path $installer)) {
@@ -44,9 +46,10 @@ task test pack, {
 	mkdir $testDir
 	pushd $testDir
 	exec { dotnet new tool-manifest }
-	remove C:\Users\${env:Username}\.nuget\packages\dotnet-innosetup
-	exec { dotnet tool install dotnet-innosetup --add-source ..\..\nupkg }
+	remove C:\Users\${env:Username}\.nuget\packages\$name
+	exec { dotnet tool install $name --add-source ..\..\nupkg }
 	dotnet iscc /?
+	dir C:\Users\${env:Username}\.nuget\packages\$name\${script:Version}
 	popd
 	popd
 }
