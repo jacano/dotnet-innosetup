@@ -1,0 +1,4 @@
+dotnet tool restore
+dotnet ib download
+dotnet ib getVersion
+dotnet ib pack

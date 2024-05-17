@@ -9,13 +9,14 @@
   </PropertyGroup>
 
 <PropertyGroup>
+  <PackageId>innosetup-tool</PackageId>
   <PackAsTool>true</PackAsTool>
   <ToolCommandName>iscc</ToolCommandName>
   <PackageOutputPath>./nupkg</PackageOutputPath>
-  <Authors>sidian</Authors>
+  <Authors>jacano</Authors>
   <Description>dotnet tool wrapper for InnoSetup.</Description>
   <PackageLicenseFile>license.txt</PackageLicenseFile>
-  <PackageProjectUrl>https://github.com/sidiandi/dotnet-innosetup</PackageProjectUrl>
+  <PackageProjectUrl>https://github.com/jacano/dotnet-innosetup</PackageProjectUrl>
   <Readme>Readme.md</Readme>
   <Tags>InnoSetup</Tags>
 </PropertyGroup>
